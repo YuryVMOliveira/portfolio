@@ -18,13 +18,19 @@ function updateProfileInfo(profileData) {
     
     const phone = document.getElementById('profile.phone')
     phone.innerText=profileData.phone
+    phone.href=`tel:${profileData.phone}`
 
     const email = document.getElementById(' profile.email')
     email.innerText = profileData.email
-    
+    email.href=`mailto:${profileData.email}`
+}
+function updateSofSkills(profileData){
+    const softSkills = document.getElementById('profile.skills.softSkills')
+    softSkills.innerHTML=profileData.skills.softSkills.map(skill=>`<l1>${skill}</>`).join('')
 }
 (async ()=> {
     const profiteData = await fetchProfileData()
     updateProfileInfo(profiteData)
+    updateSofSkills(profiteData)
 }) ()
 
