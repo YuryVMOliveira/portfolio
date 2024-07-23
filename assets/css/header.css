@@ -36,7 +36,7 @@
     display: inline-block;
     width: 24px;
     height: 24px;
-    background-image: url(/assets/img/icons/perfil.png);
+    background-image: url('/assets/img/icons/perfil.png');
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: .5rem;
